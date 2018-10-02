@@ -36,7 +36,7 @@ def lambda_handler(event, context):
         NotificationMessage = 'New file {} received on Bucket {} and deployed to Bucket {}'.format(NewFileUploaded, BucketName, PortfolioBucket.name)
         NotificationSubject = 'Notification for deployment of code on AWS S3'
         Topic.publish(Message = NotificationMessage, Subject = NotificationSubject)
-    except:
+    except:  # Send an error message to SNS if not successful
         NotificationMessage = 'Deployent of code was unsuccessful - please check configurations'
         NotificationSubject = 'Code Deployment Failed'
         Topic.publish(Message = NotificationMessage, Subject = NotificationSubject)
