@@ -7,8 +7,4 @@ phases:
       
 artifacts:
   files:
-    - HTML/*
-    - HTML/images/*
-    - HTML/styles/*
-    - HTML/docs/*
-
+    - **/*
