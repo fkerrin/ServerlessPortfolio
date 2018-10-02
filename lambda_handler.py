@@ -29,4 +29,12 @@ def lambda_handler(event, context):
             PortfolioBucket.Object(FileName).Acl().put(ACL = 'public-read')
             # ACL is required to give public permissions to the file objects
 
+    # Now need to notify that new code has been deployed
+    SNS = boto3.resource('sns')
+    Topic = SNS.Topic('arn:aws:sns:eu-west-1:258508589804:CodeDeployed')
+    NotificationMessage = 'New file {} received on Bucket {} and deployed to Bucket {}'.format(NewFileUploaded, BucketName, PortfolioBucket.name)
+    NotificationSubject = 'Notification for deployment of code on AWS S3'
+    Topic.publish(Message = NotificationMessage, Subject = NotificationSubject)
+
     return
+
