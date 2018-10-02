@@ -10,13 +10,14 @@ def lambda_handler(event, context):
     BucketName = event['Records'][0]['s3']['bucket']['name']
     NewFileUploaded = event['Records'][0]['s3']['object']['key']
     
-    s3 = boto3.resource('s3')  # Create an S3 resource - need this to refer to S3 objects
-    BuildBucket = s3.Bucket(BucketName)  # Where packaged code is stored
-    PortfolioBucket = s3.Bucket('fkerrin.com')  # Where code will be unpackaged to
+    S3 = boto3.resource('s3')  # Create an S3 resource - need this to refer to S3 objects
+#    BuildBucket = S3.Bucket(BucketName)  # Where packaged code is stored
+    ZipObject = S3.Object(BucketName, NewFileUploaded)
+    PortfolioBucket = S3.Bucket('fkerrin.com')  # Where code will be unpackaged to
     
     # Create a pointer to the file object in memory and read the zipfile into that memory location
-    ZippedCode = io.BytesIO()
-    BuildBucket.download_fileobj(NewFileUploaded, ZippedCode)
+    ZippedCode = ZipObject.get()['Body'].read()
+#    BuildBucket.download_fileobj(NewFileUploaded, ZippedCode)
 
     # Now unzip the contents of each file and send to the destination bucket
     with zipfile.ZipFile(ZippedCode) as MyZip:
