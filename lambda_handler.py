@@ -15,9 +15,7 @@ def lambda_handler(event, context):
     BuildBucket = S3.Bucket(BucketName)  # Where packaged code is stored
     ZipObject = S3.Object(BucketName, NewFileUploaded)
     PortfolioBucket = S3.Bucket('fkerrin.com')  # Where code will be unpackaged to
-    print('Bucket object for code uploads to S3: {}'.format(BuildBucket))
-    print('New file found in the S3 bucket is: {}'.format(NewFileUploaded))
-    
+
     # Create a pointer to the file object in memory and read the zipfile into that memory location
     ZippedCode = io.BytesIO()
     BuildBucket.download_fileobj(NewFileUploaded, ZippedCode)
@@ -30,20 +28,5 @@ def lambda_handler(event, context):
                 ExtraArgs = {'ContentType' : mimetypes.guess_type(FileName)[0]})
             PortfolioBucket.Object(FileName).Acl().put(ACL = 'public-read')
             # ACL is required to give public permissions to the file objects
-    """	
-    portfolio_zip = io.BytesIO()
-
-    print('In-memory file object for reading the zipdfile data: {}'.format(portfolio_zip))
-
-    BuildBucket.download_fileobj(NewFileUploaded, portfolio_zip)
-
-    print(portfolio_zip)
-
-    with zipfile.ZipFile(portfolio_zip) as myZip:
-
-        for item in myZip.namelist():
-
-            print(item)
-    """
 
     return
