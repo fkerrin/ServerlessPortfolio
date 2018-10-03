@@ -6,4 +6,7 @@ Code following ACloudGuru course on creating a serverless portfolio using AWS
 
 1 October 2018 - slight update following comments
 
-2 October - CodeBuild to package code from GitHub, Lambda to unpackage, deploy and notify
+2 October 2018 - CodeBuild to package code from GitHub, Lambda to unpackage, deploy and notify
+
+3 October 2018 - CodePipeline to orchestrate build, upload and notification - automatic on GitHub update
+
