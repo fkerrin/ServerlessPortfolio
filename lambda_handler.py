@@ -8,15 +8,31 @@ def lambda_handler(event, context):
 
     """ Event trigger can be CodePipelne trigger or new file on S3 - get the bucket name and the new file from the event recordset.
      Assuming only one event in each case - ['CodePipeline.job']['data']['inputArtifacts'][0] or ]['records'][0]"""
+
+    # TROUBLESHOOTING
+    """print(event)
+    Job = event.get('CodePipeline.job')
+    CodePipeline = boto3.client('codepipeline')
+    CodePipeline.put_job_success_result(jobId = Job['id'])
+    """
     Job = event.get('CodePipeline.job')  # This will get the CodePipeline job if this was the trigger or None if not
     if Job:
-        BucketName = Job['data']['inputArtifacts'][0]['location']['s3Location']['bucketName']
-        NewFileUploaded = Job['data']['inputArtifacts'][0]['location']['s3Location']['objectKey']
+        try:
+            BucketName = Job['data']['inputArtifacts'][0]['location']['s3Location']['bucketName']
+            NewFileUploaded = Job['data']['inputArtifacts'][0]['location']['s3Location']['objectKey']
+        except:
+            print('Something is wrong with the CodePipeline trigger data')
+            CodePipeline = boto3.client('codepipeline')
+            CodePipeline.put_job_failure_result(jobId = Job['id'])
     else:
-        BucketName = event['Records'][0]['s3']['bucket']['name']
-        NewFileUploaded = event['Records'][0]['s3']['object']['key']
+        try:
+            BucketName = event['Records'][0]['s3']['bucket']['name']
+            NewFileUploaded = event['Records'][0]['s3']['object']['key']
+        except:
+            print('Something is wrong with the S3 trigger data')
 
-    print('New file {} was uploaded to S3 bucket {}'.format(NewFileUploaded, BucketName))
+    # Print out the bucket and object so we know where the trigger came from
+    print('New build file {} was uploaded to S3 bucket {}'.format(NewFileUploaded, BucketName))
 
     try:
         S3 = boto3.resource('s3', config = Config(signature_version = 's3v4'))  # Create an S3 resource - need this to refer to S3 objects
