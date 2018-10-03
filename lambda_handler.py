@@ -11,12 +11,11 @@ def lambda_handler(event, context):
     Job = event.get('CodePipeline.job')  # This will get the CodePipeline job if this was the trigger or None if not
     if Job:
         BucketName = Job['data']['inputArtifacts'][0]['location']['s3Location']['bucketName']
-        NeFileUploaded = Job['data']['inputArtifacts'][0]['location']['s3Location']['objectKey']
-    elif:
+        NewFileUploaded = Job['data']['inputArtifacts'][0]['location']['s3Location']['objectKey']
+    else:
         BucketName = event['Records'][0]['s3']['bucket']['name']
         NewFileUploaded = event['Records'][0]['s3']['object']['key']
-    else:
-        BucketName = NewFileUploaded = ''  # This will cause exception and generate message below
+
     print('New file {} was uploaded to S3 bucket {}'.format(NewFileUploaded, BucketName))
 
     try:
