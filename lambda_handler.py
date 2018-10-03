@@ -9,12 +9,6 @@ def lambda_handler(event, context):
     """ Event trigger can be CodePipelne trigger or new file on S3 - get the bucket name and the new file from the event recordset.
      Assuming only one event in each case - ['CodePipeline.job']['data']['inputArtifacts'][0] or ]['records'][0]"""
 
-    # TROUBLESHOOTING
-    """print(event)
-    Job = event.get('CodePipeline.job')
-    CodePipeline = boto3.client('codepipeline')
-    CodePipeline.put_job_success_result(jobId = Job['id'])
-    """
     Job = event.get('CodePipeline.job')  # This will get the CodePipeline job if this was the trigger or None if not
     if Job:
         try:
