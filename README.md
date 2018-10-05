@@ -10,3 +10,5 @@ Code following ACloudGuru course on creating a serverless portfolio using AWS
 
 3 October 2018 - CodePipeline to orchestrate build, upload and notification - automatic on GitHub update
 
+5 October 2018 - Babel and JavaScript to give some dynamic content to web page.
+

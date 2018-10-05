@@ -1,0 +1,61 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+	<title>Babel Demo</title> <!--This text will appear in browser tab-->
+	<style media = "screen">
+	  .errorBox{
+	    border: 1px solid red;
+		background-color: #eebbbb; <!--Light Red - rrggbb - "screen" media format-->
+		margin: 1em;
+		padding: 1em;
+	  }
+	  .errorBox--hidden{
+	    display: none;
+	  }
+	</style>
+  </head>
+  <body>
+    <main>
+	  <label>Enter Name  <input id = "NameEntered" type = "text"/></label>
+	  <!--This puts a text box with the label "Name" next to it-->
+	  <button id = "SubmitName">Click Me!</button>
+	  <!--Put a button for user to click when name entered in box-->
+      <div id = "Content"></div>
+	  <!--Create a placeholder for content-->
+	  <div id = "Error" class = "errorBox--hidden"></div>
+	  <!--Create an error object - start with it hidden-->
+	</main>
+	
+	<script src = "https://unpkg.com/babel-standalone">
+	
+	</script>
+	
+	<script type = "text/babel" data-presets = "latest">
+	
+	const GetMessage = (name) => `Welcome to JavaScript ${name}!`; //Function to create welcome message
+	const Button = document.getElementById("SubmitName"); //Get access to the button
+	const ContentArea = document.getElementById("Content"); //Create an object for content
+	const MessageArea = document.getElementById("Error"); //Create an object for messages - starts by being hidden
+	
+	Button.addEventListener("click", (Event) => {
+	  //Start by resetting any on-screen content or errors
+	  MessageArea.className = "errorBox--hidden";
+	  ContentArea.textContent = "";
+	  
+	  let Name = document.getElementById("NameEntered").value;
+	  if(Name.length < 2){
+	  //  alert("Please enter a name."); //Better way to do this is with a message area
+	    MessageArea.textContent = "Please enter a name.";
+		MessageArea.className = "errorBox"; //Show the message area
+	  }
+	  else{
+		ContentArea.textContent = GetMessage(Name); //Replace "content" in <div> section with welcome message
+		MessageArea.className = "errorBox--hidden"; //Show the message area
+	  }
+	});
+	
+	</script>
+	
+  </body>
+ </html>
