@@ -12,3 +12,5 @@ Code following ACloudGuru course on creating a serverless portfolio using AWS
 
 5 October 2018 - Babel and JavaScript to give some dynamic content to web page.
 
+8 October 2018 - Use ReactJS for web components.
+
