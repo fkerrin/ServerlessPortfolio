@@ -3,6 +3,8 @@
   <head>
     <meta charset = "utf-8">
 	<title>React Demo</title> <!--This text will appear in browser tab-->
+	<link rel="stylesheet" href="https://unpkg.com/mocha@5.2.0/mocha.css"/>
+
 	<style media = "screen">
 	  .messageBox{
 	    border: 1px solid;
@@ -31,10 +33,13 @@
   </head>
   <body>
     <main id = "Content"></main>
+	<div id = "mocha"></div>
 	
 	<script src = "https://unpkg.com/babel-standalone"></script>
 	<script type = "text/javascript" src = "https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
 	<script type = "text/javascript" src = "https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+	<script type = "text/javascript" src = "https://unpkg.com/chai@4.2.0/chai.js"></script>
+	<script type = "text/javascript" src = "https://unpkg.com/mocha@5.2.0/mocha.js"></script>
 	
 	<script type = "text/babel" data-presets = "react">
 	  //The below tells react to render the first argument into the part of the document in the second argument
@@ -55,7 +60,7 @@
 		  this.buttonClicked = this.buttonClicked.bind(this); //Need to do this whenever you use an event handler
 		}
 		
-		buttonClicked(evt){
+		buttonClicked(Event){
 		  let Name = this.refs.InputName.value;
 		  
 		  if (Name == "Liam") {
@@ -81,7 +86,7 @@
 		  return(
 		    <div>
 			  <label>Enter Name  <input ref = "InputName" type = "text"/></label>
-			  <button onClick = {this.buttonClicked}>Click Me!</button>
+			  <button id = "InputButton" onClick = {this.buttonClicked}>Click Me!</button>
 			  <MessageBox type = {Msg.type} message = {Msg.body}/>
 			</div>
 		  )
@@ -101,6 +106,50 @@
 	  ReactDOM.render(<InputName/>, document.getElementById('Content'));
 	
 	</script>
+
+	<script type = "text/babel" data-presets = "react">
+	  const Assert = chai.assert;
+	  
+	  mocha.ui("bdd");
+	  mocha.reporter("html");
+	  
+	  describe("Example Tests", () => {
+	    it("Simple Chai tests.", () => {
+		  Assert.equal(1, 2 - 1, "This should pass");
+		  Assert.notEqual(1, 2, "This should also pass");
+		  Assert.closeTo(Math.PI, 3, .2, "PI is close enough to 3");
+		});
+
+	    it("Found our component.", () => {
+		  Assert.isDefined(MessageBox, "Our MessageBox is defined!");
+		});
+
+	  });
+	  
+	  describe("Document Tests", () => {
+	    it("Rendered an empty messageBox at the start.", () => {
+		  let MsgBox = document.querySelector(".messageBox");
+		  Assert.isDefined(MsgBox, "messageBox is defined");
+		  Assert.include(MsgBox.classList.value, "hidden", "hidden is one of the possible states");
+		  Assert.equal(MsgBox.innerText, "", "MessageBox is empty.");
+		});
+
+	    it("Rendered an errorr when no name entered.", () => {
+		  let MsgBox = document.querySelector(".messageBox");
+		  let Button = document.querySelector("#InputButton");
+		  Button.click(); //Simulates a button click
+		  Assert.include(MsgBox.classList.value, "error", "Error when messageBox empty");
+		});
+
+	    it("Found our component.", () => {
+		  Assert.isDefined(MessageBox, "Our MessageBox is defined!");
+		});
+
+	  });
+	  
+	  mocha.run();
 	
+	</script>
+
   </body>
  </html>
