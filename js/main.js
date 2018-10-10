@@ -1,3 +1,3 @@
 import 'react-dom'
 
-console.log("Frank's serverless portfolio");
+console.log("Frank's serverless portfolio.");
