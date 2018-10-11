@@ -57,7 +57,7 @@ describe('ExampleWorkBubble component', () => {
   //Each test is denoted by the it functions below
   
   it('Should be one <img> element', () =>{
-    expect(Images.length).toEqual(2);
+    expect(Images.length).toEqual(1);
   });
   
   it('Should have correct image src', () =>{
