@@ -37,23 +37,32 @@ describe('ExampleWork component', () => {
   let Component = shallow(<ExampleWork Work = {MyWorkExamples}/>);
   //Each test is denoted by the it functions below
   
-  it('There should be a <section> element', () =>{
+  it('Print out the object', () =>{
     console.log(Component.debug()); //This just prints out the Component object
   });
   
-  it('Confirm the type of the <section> element', () =>{
-    expect(Component.type()).toEqual('section');
+  it('Confirm the type of the <span> element', () =>{
+    expect(Component.type()).toEqual('span');
   });
   
   it('Expect to have as many children as the work examples array', () =>{
     expect(Component.find('ExampleWorkBubble').length).toEqual(MyWorkExamples.length);
   });
+  
+  it('Should be able to open or close the modal window', () =>{
+	Component.instance().OpenModal(); //Enzyme method instance allows to call our functions
+    expect(Component.instance().state.modalOpen).toBe(true);
+	Component.instance().CloseModal();
+    expect(Component.instance().state.modalOpen).toBe(false);
+  });
 
 });
 
 describe('ExampleWorkBubble component', () => {
-  let Component = shallow(<ExampleWorkBubble Example = {MyWorkExamples[1]}/>); //Need to give it one set of data, not whole array
+  let MockOpenModalFn = jest.fn(); //Allows to simulate a function call
+  let Component = shallow(<ExampleWorkBubble Example = {MyWorkExamples[1]} OpenModal = {MockOpenModalFn} />); //Need to give it one set of data, not whole array
   let Images = Component.find("img"); //Returns an array of all <img> components found
+  
   //Each test is denoted by the it functions below
   
   it('Should be one <img> element', () =>{
@@ -62,6 +71,11 @@ describe('ExampleWorkBubble component', () => {
   
   it('Should have correct image src', () =>{
     expect(Images.prop('src')).toEqual(MyWorkExamples[1].image.src);
+  });
+  
+  it('Should call the OpenModal handler when clicked', () =>{
+	Component.find('.section__exampleWrapper').simulate('click');
+    expect(MockOpenModalFn).toHaveBeenCalled();
   });
 
 });

@@ -15,3 +15,5 @@ Code following ACloudGuru course on creating a serverless portfolio using AWS
 8 October 2018 - Use ReactJS for web components.
 
 10 October 2018 - Tested with chai and mocha, also used webpack to package.
+
+12 October 2018 - Added onClick handlers to reval and hide data.

@@ -6,27 +6,33 @@ console.log("Frank's serverless portfolio."); //Echo to the console for troubles
 
 const MyWorkExamples = [
   {
-    'title': "Broadcast Technology",
+    'title': 'Broadcast Technology',
+	'href': 'https://example.com',
+	'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
 	'image': {
-	  'desc': "Broadcast TV Rack Room",
-	  'src': "images/MediaLab_rackA.jpg",
-	  'comment': ""
+	  'desc': 'Broadcast TV Rack Room',
+	  'src': 'images/MediaLab_rackA.jpg',
+	  'comment': ''
 	}
   },
   {
-    'title': "Control Rooms",
+    'title': 'Control Rooms',
+	'href': 'https://example.com',
+	'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
 	'image': {
-	  'desc': "Broadcast TV Control Room",
-	  'src': "images/tv-control-room.jpg",
-	  'comment': ""
+	  'desc': 'Broadcast TV Control Room',
+	  'src': 'images/tv-control-room.jpg',
+	  'comment': ''
 	}
   },
   {
-    'title': "Cloud Technology",
+    'title': 'Cloud Technology',
+	'href': 'https://example.com',
+	'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
 	'image': {
-	  'desc': "Python Code for AWS Automation",
-	  'src': "images/AWS Automation Code.png",
-	  'comment': ""
+	  'desc': 'Python Code for AWS Automation',
+	  'src': 'images/AWS Automation Code.png',
+	  'comment': ''
 	}
   }
 ];
