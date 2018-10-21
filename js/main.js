@@ -7,8 +7,11 @@ console.log("Frank's serverless portfolio."); //Echo to the console for troubles
 const MyWorkExamples = [
   {
     'title': 'Broadcast Technology',
-	'href': 'https://example.com',
-	'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+	'href': 'http://www.osn.com',
+	'desc1': '- Complete revamp of broacast server room',
+	'desc2': '- Upgrade of studio area and facilities',
+	'desc3': '- Addition of 40 channels to line-up with HD upgrades',
+	'desc4': '- Upgrade of playout and workflow in Sports and News area',
 	'image': {
 	  'desc': 'Broadcast TV Rack Room',
 	  'src': 'images/MediaLab_rackA.jpg',
@@ -17,8 +20,11 @@ const MyWorkExamples = [
   },
   {
     'title': 'Control Rooms',
-	'href': 'https://example.com',
-	'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+	'href': 'http://www.osn.com',
+	'desc1': '- Complete revamp of broacast NOC',
+	'desc2': '- Consolidation of two different working groups for  efficiency',
+	'desc3': '- Incorporation of comprehensive alarm and monitoring system',
+	'desc4': '- Upgrade and consolidation of post-production areas',
 	'image': {
 	  'desc': 'Broadcast TV Control Room',
 	  'src': 'images/tv-control-room.jpg',
@@ -27,8 +33,11 @@ const MyWorkExamples = [
   },
   {
     'title': 'Cloud Technology',
-	'href': 'https://example.com',
-	'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+	'href': 'http://www.osn.com',
+	'desc1': '- Replication of archive to AWS, automation of archive workflow',
+	'desc2': '- Disaster recovery strategy based on cloud infrastructure',
+	'desc3': '- Team re-skilling for cloud technologies',
+	'desc4': '- PoC for playout and post-production',
 	'image': {
 	  'desc': 'Python Code for AWS Automation',
 	  'src': 'images/AWS Automation Code.png',

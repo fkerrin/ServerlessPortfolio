@@ -233,4 +233,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal__image {
   opacity: 0.2;
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
 }

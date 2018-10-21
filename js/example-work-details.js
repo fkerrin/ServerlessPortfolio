@@ -22,11 +22,18 @@ class ExampleWorkDetails extends React.Component {
 		  {WorkExample.title}
           </h2>
           <a className="color--skyBlue modal__link"
-             href={WorkExample.href}>
+            target="_blank" //Opens link in new tab
+            href={WorkExample.href}>
             Check it out
           </a>
           <p className="modal__description">
-		  {WorkExample.desc}
+		  {WorkExample.desc1}
+		  <br/>
+	      {WorkExample.desc2}
+		  <br/>
+	      {WorkExample.desc3}
+		  <br/>
+	      {WorkExample.desc4}
           </p>
         </div>
       </div>
