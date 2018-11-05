@@ -1,5 +1,4 @@
 *.pem
-package-lock.json
 
 config.dev.json
 node_modules/
