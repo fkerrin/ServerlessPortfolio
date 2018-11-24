@@ -17,3 +17,5 @@ Code following ACloudGuru course on creating a serverless portfolio using AWS
 10 October 2018 - Tested with chai and mocha, also used webpack to package.
 
 12 October 2018 - Added onClick handlers to reval and hide data.
+
+24 November 2018 - Did relative resizing of text and added further detail on projects

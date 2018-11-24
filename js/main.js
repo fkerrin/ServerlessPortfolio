@@ -6,6 +6,19 @@ console.log("Frank's serverless portfolio."); //Echo to the console for troubles
 
 const MyWorkExamples = [
   {
+    'title': 'Technology Leadership',
+	'href': 'http://www.osn.com',
+	'desc1': '- Planning of technology strategy for short and long term',
+	'desc2': '- Responsible for Capex and Opex budgets and staffing',
+	'desc3': '- Leading large and complex projects in an ever-changing landscape',
+	'desc4': '- Advising senior management on technology issues',
+	'image': {
+	  'desc': 'Broadcast TV Rack Room',
+	  'src': 'images/DR_Planning.jpg',
+	  'comment': ''
+	}
+  },
+  {
     'title': 'Broadcast Technology',
 	'href': 'http://www.osn.com',
 	'desc1': '- Complete revamp of broacast server room',
@@ -43,7 +56,34 @@ const MyWorkExamples = [
 	  'src': 'images/AWS Automation Code.png',
 	  'comment': ''
 	}
+  },
+  {
+    'title': 'Broadcast Facility Rebuild',
+	'href': 'http://www.osn.com',
+	'desc1': '- Set up broadcast facility in Bahrain and migrated all services from Rome',
+	'desc2': '- Managing Civil and MEP contractors to deliver base infrastructure',
+	'desc3': '- Working with systems integrators for build of playout, NOC and satellite uplink',
+	'desc4': '- Working with Operations management in Rome and Bahrain for migration of services',
+	'image': {
+	  'desc': 'Bahrain Playout Control Room',
+	  'src': 'images/BNC NOC.JPG',
+	  'comment': ''
+	}
+  },
+  {
+    'title': 'Miscellaneous Projects',
+	'href': 'http://www.osn.com',
+	'desc1': '- Migration of entire DTH playout to HD with closed caption subtitling',
+	'desc2': '- Setup of OTT platform with VoD and live streaming',
+	'desc3': '- Setup of broadcast IT infrastructure and migration of media workflows',
+	'desc4': '- Continual expansion of the broadcast platform to meet market expectations',
+	'image': {
+	  'desc': 'Gannt Chart',
+	  'src': 'images/generic-gantt-chart.JPG',
+	  'comment': ''
+	}
   }
+
 ];
 
 

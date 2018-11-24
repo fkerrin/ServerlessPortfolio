@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section__heading--largest {
   float: left;
-  font-size: 5rem;
+  font-size: 5vmax;
   margin-left: 2rem;
 }
 
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .socialWrapper {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 4vmax;
 }
 
 
@@ -218,9 +218,9 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 2.4rem;
+  font-size: 2vmax; # Font size varies depending on the size of the viewport
   padding: 2rem;
-  width: 66%;
+  width: 100%;
 }
 
 .modal__link {
