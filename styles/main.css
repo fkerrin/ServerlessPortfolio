@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section--description {
-  font-size: 2.8rem;
+  font-size: 2.5vmax;
   padding-left: 3.5rem;
   padding-right: 3.5rem;
 }
@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 2vmax; # Font size varies depending on the size of the viewport
+  font-size: 2.5vmax; # Font size varies depending on the size of the viewport
   padding: 2rem;
   width: 100%;
 }
@@ -232,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal__image {
-  opacity: 0.2;
+  opacity: 0.1;
   /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
