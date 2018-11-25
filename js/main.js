@@ -74,7 +74,7 @@ const MyWorkExamples = [
     'title': 'Miscellaneous Projects',
 	'href': 'http://www.osn.com',
 	'desc1': '- Migration of entire DTH playout to HD with closed caption subtitling',
-	'desc2': '- Setup of OTT platform with VoD and live streaming',
+	'desc2': '- Setup of media processing and content delivery for OTT platform with VoD and live streaming',
 	'desc3': '- Setup of broadcast IT infrastructure and migration of media workflows',
 	'desc4': '- Continual expansion of the broadcast platform to meet market expectations',
 	'image': {
