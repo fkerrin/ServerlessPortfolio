@@ -2,4 +2,3 @@
 
 config.dev.json
 node_modules/
-dist/
