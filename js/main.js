@@ -14,7 +14,7 @@ const MyWorkExamples = [
 	'desc4': '- Advising senior management on technology issues',
 	'image': {
 	  'desc': 'Broadcast TV Rack Room',
-	  'src': 'images/DR_Planning.jpg',
+	  'src': 'images/org_chart.png',
 	  'comment': ''
 	}
   },
