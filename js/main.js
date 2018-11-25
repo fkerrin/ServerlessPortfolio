@@ -35,7 +35,7 @@ const MyWorkExamples = [
     'title': 'Control Rooms',
 	'href': 'http://www.osn.com',
 	'desc1': '- Complete revamp of broacast NOC',
-	'desc2': '- Consolidation of two different working groups for  efficiency',
+	'desc2': '- Consolidation of two different working groups for efficiency',
 	'desc3': '- Incorporation of comprehensive alarm and monitoring system',
 	'desc4': '- Upgrade and consolidation of post-production areas',
 	'image': {
