@@ -26,14 +26,14 @@ describe('ExampleWork component', () => {
   
   //Each test is denoted by the it functions below
   
-  it('There should be one anchors <a> element', () =>{
+/*  it('There should be one anchors <a> element', () =>{
     expect(Anchors.length).toEqual(1);
   });
   
   it('Modal window should  link to our project', () =>{
     expect(Anchors.prop('href')).toEqual(ExampleData.href);
   });
-  
+*/  
   it('Test modal window state - open or closed', () =>{
     expect(Component.find('.background--skyBlue').hasClass('modal--closed')).toBe(true);
     expect(OpenComponent.find('.background--skyBlue').hasClass('modal--open')).toBe(true);
