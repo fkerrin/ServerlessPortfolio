@@ -21,19 +21,38 @@ class ExampleWorkDetails extends React.Component {
           <h2 className="modal__title">
 		  {WorkExample.title}
           </h2>
-          <a className="color--skyBlue modal__link"
-            target="_blank" //Opens link in new tab
-            href={WorkExample.href}>
-            Check it out
-          </a>
+          <p className="modal__text">
+		  {WorkExample.long_desc}
+          </p>
           <p className="modal__description">
 		  {WorkExample.desc1}
-		  <br/>
+          </p>
+          <p className="modal__description">
 	      {WorkExample.desc2}
-		  <br/>
+          </p>
+          <p className="modal__description">
 	      {WorkExample.desc3}
-		  <br/>
+          </p>
+          <p className="modal__description">
 	      {WorkExample.desc4}
+          </p>
+          <p className="modal__description">
+	      {WorkExample.desc5}
+          </p>
+          <p className="modal__description">
+	      {WorkExample.desc6}
+          </p>
+          <p className="modal__description">
+	      {WorkExample.desc7}
+          </p>
+          <p className="modal__description">
+	      {WorkExample.desc8}
+          </p>
+          <p className="modal__description">
+	      {WorkExample.desc9}
+          </p>
+          <p className="modal__description">
+	      {WorkExample.desc10}
           </p>
         </div>
       </div>
@@ -42,5 +61,12 @@ class ExampleWorkDetails extends React.Component {
   }
 }
 
+//		<!-- Uncomment to add link but note that it will be added to all modal windows
+//          <a className="color--skyBlue modal__link"
+//            target="_blank" //Opens link in new tab
+//            href={WorkExample.href}>
+//            Check it out
+//          </a>
+//		End of commented section-->
 
 export default ExampleWorkDetails;

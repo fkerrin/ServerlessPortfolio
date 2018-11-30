@@ -19,3 +19,5 @@ Code following ACloudGuru course on creating a serverless portfolio using AWS
 12 October 2018 - Added onClick handlers to reval and hide data.
 
 24 November 2018 - Did relative resizing of text and added further detail on projects
+
+30 November 2018 - Revamped content, changed text formating of modal window and added scrolling

@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 4rem;
 }
 
-/* borrder-radius gives rounded corners, if set to 100% it is a full circle */
+/* border-radius gives rounded corners, if set to 100% it is a full circle */
 .section__example {
   border-radius: 100%;
   cursor: pointer;
@@ -203,6 +203,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   z-index: 100;
+  overflow-y: auto;
 }
 
 .modal__closeButton {
@@ -215,12 +216,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal__text {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  font-size: 2.5vmax; # Font size varies depending on the size of the viewport
-  padding: 2rem;
-  width: 100%;
+  font-size: 2vmax;
+  width: 90%;
+  padding-left: 5%;
+}
+
+.modal__description {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 2vmax;
+  text-indent: -2vmax;
+  width: 90%;
 }
 
 .modal__link {
