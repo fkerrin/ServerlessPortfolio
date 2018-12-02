@@ -21,11 +21,11 @@
 */
 
 .background--skyBlue {
-  background-color: rgb(52, 152, 219);
+  background-color: rgb(20, 167, 204);
 }
 
 .color--skyBlue {
-  color: rgb(52, 152, 219);
+  color: rgb(20, 167, 204);
 }
 
 .color--cloud {
@@ -43,6 +43,16 @@
 .section__example {
   background-color: rgb(44, 62, 80);
 }
+.color-dark {
+	background: #171B1C;
+	color: rgb(238, 238, 238);
+}
+.color-light {
+	background-color: #fff;
+}
+.color-color {
+	background-color: #14A7CC;
+}
 
 /*
   General Styles
@@ -55,12 +65,14 @@ html {
 }
 
 body {
-  font-family: 'Cardo', serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
+	background: #F7F8FA;
+	color: #4A4A4A;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: .1rem;
 }
 
@@ -76,7 +88,23 @@ h1, h2, h3, h4, h5, h6 {
   overflow: auto;
 }
 
+.center-align {
+	text-align: center;
+}
 
+.right-align {
+	float: right;
+}
+
+.left-align {
+	float: left;
+}
+
+.frank-pic {
+	width: 132px;
+	border: 0px solid #14A7CC;
+	border-radius: 50%;
+}
 /*
   Sections
 */
@@ -84,11 +112,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* This describes the banded sections separating the different parts of the page */
 .section {
-  font-size: 4.2rem;
+  font-size: 2rem;
   min-height: 10vh;
   position: relative;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .section--alignCentered {
@@ -117,15 +145,18 @@ h1, h2, h3, h4, h5, h6 {
 .section__exampleWrapper,
 .section__example {
   display: inline-block;
-  height: 35rem;
-  width: 35rem;
+  height: 25rem;
+  width: 25rem;
 }
 
 .section__exampleWrapper {
   margin-right: 4rem;
 }
+.section__example:hover {
+	background-color: #14A7CC;
+}
 
-/* border-radius gives rounded corners, if set to 100% it is a full circle */
+/* borrder-radius gives rounded corners, if set to 100% it is a full circle */
 .section__example {
   border-radius: 100%;
   cursor: pointer;
@@ -141,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section__exampleTitle{
-  font-size: 3.4rem;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   width: 90%;
@@ -159,20 +190,48 @@ h1, h2, h3, h4, h5, h6 {
   Header
 */
 
+.section-dark {
+	    background: #171B1C;
+    color: rgb(238, 238, 238);
+    font-size: 16px;
+}
 .section__heading--largest {
   float: left;
   font-size: 5vmax;
   margin-left: 2rem;
 }
 
-.section--social {
-  float: right;
-  line-height: 10rem;
-  margin-right: 2rem;
+.section--social { 
+padding-inline-start: 0px;
 }
 
+.cta_button {
+	    border: 1px solid #979797;
+    padding: 6px 15px 6px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+.cta_button:hover {
+	background-color: #14A7CC;
+	border-color: #14A7CC;
+}
+.main-title {
+	font-size: 40px; 
+	line-height: 100%; 
+	margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.small-title {
+	color: #44727F;
+}
 .social {
-  margin-right: 0.75rem;
+  position: relative;
+	top: 8px;
+	
+	
 }
 
 .socialWrapper:last-child .social {
@@ -181,10 +240,104 @@ h1, h2, h3, h4, h5, h6 {
 
 .socialWrapper {
   display: inline-block;
-  font-size: 4vmax;
+  font-size: 30px;
+	border: 1px solid rgba(151,151,151,0.38); 
+	border-radius: 100%; 
+	width:59px; 
+	height: 59px; 
+	text-align:center;
 }
+.socialWrapper:hover {
+	border-color: #14A7CC;
+}
+/*
+  cards
+*/
+.card {
+	background-color: #ffffff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+    font-size: 1.4rem;
+	padding-right: 12px;
+	border-radius: 3px;
+}
+.card-title {
+	    font-size: 14px;
+    text-transform: uppercase;
+    color: #44727F;
+    text-align: center;
+	    margin-top: -5px;
+}
+.card ul {
+	list-style: none;
+}
+.card li {
+	margin-bottom: 18px;
+}
+.card li::before {
+	content: "•"; 
+	color: #5FA2B4;
+  display: inline-block; 
+	width: 1em;
+  margin-left: -1em;
+	font-size: 12px;
+	 
+}
+.card-icon-wrapper {
+	border: 1px solid #14A7CC; 
+	width: 70px; 
+	height: 70px; 
+	border-radius: 100%; 
+	text-align: center; 
+	background-color: #fff; 
+	position:relative; 
+	left: 40%; 
+	top:-30px;
+}
+.card-icon {
+	position: relative; 
+	top:15px; 
+	font-size: 35px!important; 
+	color: #14A7CC;
+}
+/*
+  testimonial
+*/
+blockquote {
+	color: #fff;
+	margin-left: 15px;
+	
+}
+.quote-mark {
+	    color: #FFFFFF;
+    opacity: 0.7;
+    /* float: right; */
+    font-size: 1.5em!important;
+    position: relative;
+    top: 10px;
+    left: 70%;
+}
+/*
+  footer
+*/
 
-
+.footer {
+	font-size: 1.4rem;
+	color: #44727F;
+}
+.footer a {
+	color: #44727F;
+	text-decoration: none;
+}
+.footer a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.footer-pic {
+	width: 70px; height: 70px; border: 3px solid #0F8AA9; border-radius: 100%;
+    text-align: center;
+    position: relative;
+    top: -30px;
+}
 /*
   Modal
 */
@@ -203,34 +356,36 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   z-index: 100;
-  overflow-y: auto;
+	background-color: #3B555C;
+	overflow-y: auto;
+	
 }
 
 .modal__closeButton {
   position: absolute;
   right: 2rem;
-  top: 5rem;
+  top: 2rem;
   font-size: 4rem;
   z-index: 1;
   cursor: pointer;
 }
 
 .modal__text {
-  position: relative;
-  top: 0;
-  left: 0;
-  font-size: 2vmax;
-  width: 90%;
-  padding-left: 5%;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 2vmax;
+    width: 90%;
+    padding-left: 5%;
 }
 
 .modal__description {
-  position: relative;
-  top: 0;
-  left: 0;
-  font-size: 2vmax;
-  text-indent: -2vmax;
-  width: 90%;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 2vmax;
+    text-indent: -2vmax;
+    width: 90%;
 }
 
 .modal__link {

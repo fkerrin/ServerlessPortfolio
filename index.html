@@ -2,24 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Technology, Cloud and Media, Transformation</title>
+	  <!-- mobile responsive-->
+	 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2, user-scalable = no"/>
+
+    <title>Frank Kerrin : Media Technology Professional</title>
+	  <link rel="stylesheet" href="styles/grid.css"/>
     <link rel="stylesheet" href="styles/main.css"/>
 
 	<!--font-awesome is used for the social media icons - Facebook etc.-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo"/>
-  </head>
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	  
+  <meta property="og:title" content="Frank Kerrin : Media Technology Professional"/>
+	<meta property="og:site_name" content="Frank Kerrin : Media Technology Professional"/>
+	<meta property="og:image" content="https://fkerrin.com/images/Frank.png"/>
+   <link rel="shortcut icon" type="image/x-icon" href="https://fkerrin.com/frank.ico">
+	  </head>
 
   <body>
-    <main class="overflow--auto">
-      <h1 class="color--skyBlue section__heading--largest">
-        <!--Your name goes here -->
-        Frank Kerrin
-      </h1>
-
-      <ul class="section--social">
+    <main class="overflow--auto color-dark">
+     <div class="container clearfix section-dark">
+		 <div class="grid_1"></div>
+	    <div class="grid_3 center-align"><br><br>
+			<img src="images/Frank.png" alt="Frank Kerrin" class="frank-pic">
+			   <ul class="section--social" style="padding-inline-start: 0px;">
 
         <!--Links to relevant professional social media & resume -->
         <!-- See: http://fontawesome.io/icons/#brand for more -->
@@ -29,56 +36,136 @@
           <a class="color--skyBlue social"
              title="LinkedIn Profile"
              target="_blank"
-             href="https://www.linkedin.com/in/frank-kerrin/">
-            <i class="fa fa-linkedin"></i> <!--This is the font-awsome logo for LinkedIn-->
+             href="https://www.linkedin.com/in/frank-kerrin/"><em class="fa fa-linkedin"></em><!--This is the font-awsome logo for LinkedIn-->
           </a>
         </li>
 
-        <!-- Uncomment to Link to GitHub profile
-        <li class="socialWrapper color--skyBlue">
+        <!-- Link to GitHub profile -->
+        <!--li class="socialWrapper color--skyBlue">
           <a class="social color--skyBlue"
              title="GitHub Profile"
              target="_blank"
              href="https://github.com/fkerrin/">
             <i class="fa fa-github"></i>
           </a>
-        </li>
-		End of commented section-->
+        </li-->
 
         <!-- Link to resume, probably a .pdf -->
         <li class="socialWrapper">
           <a class="social color--skyBlue"
              title="Resume"
              target="_blank"
-             href="./docs/CV Frank Kerrin November 2018 - detailed.pdf">
+             href="./docs/CV Frank Kerrin October 2018 - detailed.pdf">
             <i class="fa fa-file-text"></i>
           </a>
         </li>
       </ul>
+			</div>
+	    <div class="grid_6 intro">
+			<div style="float:left;"></div><br class="hide-on-mobile"><br class="hide-on-mobile">
+			<span>Director of Technology</span>
+			<h1 class="main-title">Frank Kerrin</h1>
+			<p style="line-height: 180%;">I am a <strong>Digital Media Technology</strong> Professional with more than 30 years’ experience leading technology departments, planning, designing and executing the <strong>strategic vision</strong> for major projects, both on-premise and on <strong>AWS cloud</strong>.</p>
+			<br>
+	     <a href="mailto:fkerrin@gmail.com" class="cta_button">Get in touch</a><br><br>
+        </div>
+		  
+	    <!--div class="process usertest lightbox"><a href="process/usertesting.php" data-lightbox-gallery="process" title="prototyping">User Testing</a></div>
+              <div class="dots">...</div-->
+      </div>
+   
     </main>
 
-    <section class="background--skyBlue section">
-      <h2 class="color--cloud margin--none section__text--centered">
-        Portfolio
-      </h2>
+    <section class="section container center-align clearfix">
+		<div class="grid_3"></div>
+		 <div class="grid_6">
+		   <p class="small-title">I have recently relocated back to Ireland with my family and I am now seeking new opportunities.</p>
+		 </div>
+		
     </section>
-
+<section class="container clearfix" style="padding-bottom: 25px;">
+	<div class="grid_1">&nbsp;</div>
+	<div class="grid_3 card">
+		<div class="card-icon-wrapper"><i class="fa fa-suitcase card-icon"></i></div>
+		<p class="card-title">Technology strategy <br>
+&amp; Leadership</p>
+		<ul>
+			<li>Planning short and long term technology strategy</li>
+			<li>Managing large Capex and Obex budgets &amp; staffing</li>
+			<li>Leading large, complex projects in an ever-changing landscape</li>
+			<li>Advising Senior management on technology issues</li>
+		</ul>
+	</div>
+	<div class="grid_3 card">
+		<div class="card-icon-wrapper"><i class="fa fa-tv card-icon"></i></div>
+		<p class="card-title">Broadcast Technology<br>
+&nbsp;</p>
+	<ul>
+			<li>Complete revamp of broadcast server room and NOC</li>
+			<li>Keep with changing technology and customer demands</li>
+			<li>Addition of technology and workflows to support OTT platform</li>
+			<li>Growth of platform to keep pace with increasing content catalogue</li>
+		</ul>
+	</div>
+	<div class="grid_3 card">
+		<div class="card-icon-wrapper"><i class="fa fa-cloud card-icon"></i></div>
+		<p class="card-title">Cloud Migration<br>
+&nbsp;</p>
+		<ul>
+			<li>Replication of archive to AWS, automation of archive workflow</li>
+			<li>Disaster recovery strategy based on cloud infrastructure</li>
+			<li>Over-seeing team re-skilling for cloud technologies</li>
+			<li>PoC for playout and post-production &nbsp; &nbsp;&nbsp;  &nbsp; </li>
+		</ul>
+	</div>
+	</section>
 	<!--Render the code from example-work.js into this section-->
-	<div id = 'example-work'></div>
+	  <section class="color-light">
+	<div id="example-work"></div>
+		  </section>
 
-    <section class="background--skyBlue section">
-      <h2 class="color--cloud margin--none section__text--centered">
-        About Me
-      </h2>
-    </section>
-	
-    <section class="section section--alignCentered section--description">
-      <p class="color--darkgrey section__description">
-        Director of Technology: Media, Cloud, Broadcast Projects and Transformation.
-      </p>
-	
+    <section class="section">
+		
+     <div class="grid_3 center-align"><img src="images/logo_bbc.png" alt="BBC - British Broadcasting Corporation" title="BBC - British Broadcasting Corporation"></div>
+		<div class="grid_3 center-align"><img src="images/logo_carlton.png" alt="Carlton Television, now part of ITV London" title="Carlton Television, now part of ITV London"></div>
+		<div class="grid_3 center-align"><img src="images/logo_orbit.png" alt="Orbit Communications, now OSN" title="Orbit Communications, now OSN"></div>
+		<div class="grid_2 center-align"><img src="images/logo_osn.png" alt="OSN" title="OSN"></div>
+	</section>
+	  <div class="clearfix"></div>
+    <section class="section color-color">
+		<div class="grid_1 center-align"> </div>
+		<div class="grid_1 hide-on-mobile"> <i class="fa fa-quote-left quote-mark"></i></div>
+		<div class="grid_8">
+      <blockquote class="">
+       Frank is a long experienced engineer with great and deep knowledge on all the digital Tv technologies from baseband to high frequency. 
+His ability to manage projects in multivendor environments is effective and meticolous. 
+There's no doubt that Frank is the best engineer I met in my career so far.<br><br>
+		  <span style="color: #44727F; font-style: italic; font-size: 1.8rem;">Roberto Montemurro, Telecoms Engineer, Consultant and Advisor</span>
+      </blockquote>
+			
+			</div> <div class="clearfix"></div>
+	</section>
+	  <section class="color-dark center-align footer">
+		  <img src="images/Frank.png" alt="Frank Kerrin" class="footer-pic clearfix">
+		  <p><a href="mailto:fkerrin@gmail.com" class="cta_button">Get in touch</a></p><br><br><br>
+		
+		  <div class="container">
+			  <div class="grid_5">
+			  <p>© Frank Kerrin 2018. All Rights Reserved.</p>
+			  </div>
+			  <div class="grid_6">
+			  <p class="right-align hide-on-mobile"><a href="https://www.linkedin.com/in/frank-kerrin/" target="_blank">Linkedin</a>   &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;   <!--a href="https://github.com/fkerrin/" target="_blank"> Github </a> &nbsp;&nbsp;&nbsp; -->  <a href="https://fkerrin.com/docs/CV%20Frank%20Kerrin%20November%202018%20-%20detailed.pdf" target="_blank">View CV</a>&nbsp;&nbsp;&nbsp; </p>
+				  <p class="center-align hide-on-desktop"><a href="https://www.linkedin.com/in/frank-kerrin/" target="_blank">Linkedin</a>   &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;   <!--a href="https://github.com/fkerrin/" target="_blank"> Github </a> &nbsp;&nbsp;&nbsp; -->  <a href="https://fkerrin.com/docs/CV%20Frank%20Kerrin%20November%202018%20-%20detailed.pdf" target="_blank">View CV</a>&nbsp;&nbsp;&nbsp; </p>
+			  </div>
+			  </div>
+		  
+		    <div class="clearfix"></div>
+		  </section>
+	 
 	<script type = "text/javascript" src = "dist/bundle.js">
 	</script>
 
   </body>
 </html>
+
+

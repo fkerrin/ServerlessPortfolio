@@ -21,3 +21,5 @@ Code following ACloudGuru course on creating a serverless portfolio using AWS
 24 November 2018 - Did relative resizing of text and added further detail on projects
 
 30 November 2018 - Revamped content, changed text formating of modal window and added scrolling
+
+2 December 2018 - Complete revamp of style by Dorothy Kerrin.
