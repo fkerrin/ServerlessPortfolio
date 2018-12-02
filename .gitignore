@@ -3,3 +3,4 @@
 config.dev.json
 node_modules/
 Archives/*
+/images/.DS_Store
