@@ -5,6 +5,8 @@ import mimetypes  #Need this to guess the content type
 from botocore.client import Config  # To change the config of the S3 resource to include decryotion
 
 def lambda_handler(event, context):
+    
+    print(event)
 
     """ Event trigger can be CodePipelne trigger or new file on S3 - get the bucket name and the new file from the event recordset.
      Assuming only one event in each case - ['CodePipeline.job']['data']['inputArtifacts'][0] or ]['records'][0]"""
@@ -43,7 +45,7 @@ def lambda_handler(event, context):
         # Now unzip the contents of each file and send to the destination bucket
         with zipfile.ZipFile(ZippedCode) as MyZip:
             for FileName in MyZip.namelist():
-                UnzippedObject = MyZip.open(FileName)
+                UnzippedObject = MyZip.open(FileName, 'r')
                 PortfolioBucket.upload_fileobj(UnzippedObject, FileName,
                     ExtraArgs = {'ContentType' : mimetypes.guess_type(FileName)[0]})
                 PortfolioBucket.Object(FileName).Acl().put(ACL = 'public-read')
@@ -56,7 +58,8 @@ def lambda_handler(event, context):
         if Job:
             CodePipeline = boto3.client('codepipeline')
             CodePipeline.put_job_success_result(jobId = Job['id'])
-    except:
+    except Exception as Err:
+        print("The following error was encountered:  ", Err)
         NotificationMessage = 'Deployent of code was unsuccessful - please check configurations'
         NotificationSubject = 'Code Deployment Failed'
         Topic.publish(Message = NotificationMessage, Subject = NotificationSubject)

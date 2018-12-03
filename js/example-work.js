@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ExampleWorkDetails from '../js/example-work-details';
+import '../js/referrals'
 
 class ExampleWork extends React.Component{
 

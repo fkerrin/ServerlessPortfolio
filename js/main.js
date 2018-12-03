@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExampleWork from './example-work'; //This is my example code.
+//import showSlides from './referrals';
+//import currentSlide from './referrals';
 
 console.log("Frank's serverless portfolio."); //Echo to the console for troubleshooting
 
