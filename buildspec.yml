@@ -13,6 +13,7 @@ artifacts:
   files:
     - index.html
     - favicon.ico
+    - referrals.js
     - images/*
     - docs/*
     - styles/*

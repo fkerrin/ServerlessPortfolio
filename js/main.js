@@ -4,6 +4,7 @@ import ExampleWork from './example-work'; //This is my example code.
 
 console.log("Frank's serverless portfolio."); //Echo to the console for troubleshooting
 
+
 const MyWorkExamples = [
   {
     'title': 'Technology Strategy and Leadership',
