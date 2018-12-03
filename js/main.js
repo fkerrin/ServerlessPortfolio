@@ -23,7 +23,7 @@ const MyWorkExamples = [
   {
     'title': 'Broadcast Technology Director, OSN',
 	'href': 'http://www.osn.com',
-	'long_desc': 'At OSN I led the broadcast technology department with responsibility for all technology involved in the studio, post-production, archive, playout, compression and multiplexing for DTH and transcoding and streaming for OTT. I had responsibility for the strategic planning, staffing and budget for this area.',
+	'long_desc': 'At OSN I led the broadcast technology department with responsibility for all technology involved in the areas of studio, post-production, archive, playout, in addition to compression and multiplexing for DTH and transcoding and streaming for OTT. I had responsibility for the strategic planning, staffing and budget for this area.',
 	'desc1': '- Broadcast Engineering – provide 1st and 2nd line support 24/7 for all broadcast systems in addition to providing project assistance for the other  technical areas.',
 	'desc2': '- Broadcast Projects – manage all projects in the broadcast technology areas, preparing the budget and project plan and managing the co-ordination with suppliers, systems integrators and internal departments.',
 	'desc3': '- Cloud Technology – set up of a cloud platform to support OSN’s technology strategy. OSN’s archive and platform security systems were fully migrated to AWS cloud and various PoCs were completed for playout and post production.',
@@ -53,7 +53,7 @@ const MyWorkExamples = [
   {
     'title': 'Facility Upgrade and Rebuild',
 	'href': 'http://www.osn.com',
-	'long_desc': 'During my tenure at both OSN in Dubai and Orbit in Bahrain and Rome I have led several large rebuild or upgrade projects that involved aspects ranging from civil and MEP works up through technical infrastructure fit-out to rebuild or replacement of systems and workflows and migration of services to the new platforms. All this had to be done without service outage or at least minimising to maintenance windows.',
+	'long_desc': 'During my tenure at both OSN in Dubai and Orbit in Bahrain and Rome I have led several large rebuild or upgrade projects that involved aspects ranging from civil and MEP works up through technical infrastructure fit-out and the rebuild or replacement of systems and workflows and migration of services to the new platforms. All this had to be done without service outage or at least minimising to maintenance windows.',
 	'desc1': '- OSN UPS rebuild – a fire destroyed the UPS room in 2011 and we had to rebuild the area, install two UPSs, re-cable large parts of the building and migrate to the new power.',
 	'desc2': '- OSN CAR rebuild – we had outgrown our racks room and needed to expand while remaining on air. This included the complete revamp of the air-conditioning to an aisle containment model while remaining within the existing power constraints of the building. We worked closely with MEP consultant and contractor to achieve the optimal solution and ended up with a much more resilient server room with greater capacity.',
 	'desc3': '- OSN NOC rebuild – this was done at the same time as the CAR rebuild and for the same capacity reasons. We took this opportunity to amalgamate two operational departments and also create a showcase area.',
