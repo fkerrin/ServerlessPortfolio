@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
 	entry: [
-	  './js/referrals.js',
 	  './js/main.js'
 	],
 	output: {
