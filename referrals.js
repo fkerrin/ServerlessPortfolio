@@ -16,7 +16,7 @@ function currentSlide(n) {
 // This function runs in a loop to advance the slides every few seconds
 function autoShow() {
   plusSlides(1);
-  setTimeout(autoShow, 8000); //Change slide every xx seconds
+  setTimeout(autoShow, 30000); //Change slide every xx seconds
 }
 
 
